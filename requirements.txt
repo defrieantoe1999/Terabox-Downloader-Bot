@@ -9,3 +9,17 @@ python-dotenv
 gunicorn
 gevent
 flask
+telethon
+pymongo
+dnspython
+python-dotenv
+speedtest-cli
+psutil
+requests 
+pillow
+bs4
+ffmpeg-python 
+yt-dlp
+tinytag
+youtube-search-python
+pyppeteer
