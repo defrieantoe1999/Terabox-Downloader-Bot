@@ -17,7 +17,7 @@ import asyncio
 from web import keep_alive
 
 load_dotenv('config.env', override=True)
-bot.start(bot_token=TOKEN)
+#bot.start(bot_token=TOKEN)
 logging.basicConfig(level=logging.INFO)
 
 api_id = os.environ.get('TELEGRAM_API', '')
