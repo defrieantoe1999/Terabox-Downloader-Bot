@@ -46,19 +46,6 @@ else:
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-
-from modules._config import TOKEN, bot
-from modules._helpers import load_modules
-from modules.custdl import file_server
-import asyncio
-
-bot.start(bot_token=TOKEN)
-
-load_modules()
-asyncio.ensure_future(file_server())
-
-bot.run_until_disconnected()
-
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
     sticker_message = await message.reply_sticker("CAACAgIAAxkBAAEYonplzwrczhVu3I6HqPBzro3L2JU6YAACvAUAAj-VzAoTSKpoG9FPRjQE")
