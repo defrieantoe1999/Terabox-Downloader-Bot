@@ -124,6 +124,7 @@ async def handle_message(client, message: Message):
 if __name__ == "__main__":
     keep_alive()
     load_modules()
+    bot.start(bot_token)
     asyncio.ensure_future(file_server())
     bot.run_until_disconnected()
     app.run()
