@@ -50,6 +50,8 @@ else:
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
+bot.start(bot_token=TOKEN)
+
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
     sticker_message = await message.reply_sticker("CAACAgIAAxkBAAEYonplzwrczhVu3I6HqPBzro3L2JU6YAACvAUAAj-VzAoTSKpoG9FPRjQE")
@@ -122,7 +124,6 @@ async def handle_message(client, message: Message):
 
 if __name__ == "__main__":
     keep_alive()
-    bot.start(bot_token=TOKEN)
     load_modules()
     asyncio.ensure_future(file_server())
     bot.run_until_disconnected()
