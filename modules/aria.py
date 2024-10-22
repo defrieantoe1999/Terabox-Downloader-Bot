@@ -133,7 +133,7 @@ async def t_url_download(message):
             try:
                 is_url = True
                 download = aria2p_client.add_uris(
-                    [args], options={"dir": "/root/Valeri/dl"}
+                    [args], options={"dir": "/app/dl"}
                 )
             except Exception as e:
                 return await message.edit(f"**ERROR while adding URI** \n`{e}`")
@@ -141,7 +141,7 @@ async def t_url_download(message):
             is_mag = True
             try:
                 download = aria2p_client.add_magnet(
-                    args, options={"dir": "/root/Valeri/dl"}
+                    args, options={"dir": "/app/dl"}
                 )
             except Exception as e:
                 return await message.edit(f"**ERROR while adding URI** \n`{e}`")
