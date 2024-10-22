@@ -10,6 +10,10 @@ import os
 import time
 from status import format_progress_bar
 from video import download_video, upload_video
+from modules._config import TOKEN, bot
+from modules._helpers import load_modules
+from modules.custdl import file_server
+import asyncio
 from web import keep_alive
 
 load_dotenv('config.env', override=True)
@@ -118,4 +122,8 @@ async def handle_message(client, message: Message):
 
 if __name__ == "__main__":
     keep_alive()
+    bot.start(bot_token=TOKEN)
+    load_modules()
+    asyncio.ensure_future(file_server())
+    bot.run_until_disconnected()
     app.run()
