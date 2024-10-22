@@ -17,7 +17,7 @@ import asyncio
 from web import keep_alive
 
 load_dotenv('config.env', override=True)
-
+bot.start(bot_token=TOKEN)
 logging.basicConfig(level=logging.INFO)
 
 api_id = os.environ.get('TELEGRAM_API', '')
@@ -50,7 +50,6 @@ else:
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-bot.start(bot_token=TOKEN)
 
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
