@@ -37,7 +37,7 @@ log = getLogger("- valeri ->")
 TOKEN ="1203800025:AAGNkcUH64WACiROGxpnU4YvJNDnVqFb5v0"
 API_KEY =2118051
 API_HASH ="1d9d2bf8fdbfe48da2daa8ca1de1ee65"
-MONGO_DB = "mongodb+srv://21101054:<db_password>@sht.1vfs6.mongodb.net/?retryWrites=true&w=majority&appName=sht"
+MONGO_DB = "mongodb+srv://21101054:alfani11@sht.1vfs6.mongodb.net/?retryWrites=true&w=majority&appName=sht"
 OWNER_ID =952735084
 TMDB_KEY ="e547e17d4e91f3e62a571655cd1ccaff"
 OPENAI_API_KEY ="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"
